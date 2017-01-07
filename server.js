@@ -35,6 +35,12 @@ hbs.registerHelper('screamIt', (text) => {
   return text.toUpperCase()
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    title: 'Projects'
+  })
+})
+
 app.get('/', (req, res) => {
   res.render('index.hbs', {
     title: 'Home Page',
